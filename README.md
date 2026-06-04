@@ -63,20 +63,20 @@ Screenshots can be found in the `/screenshots` directory.
 
 * Landing Page
 
-![Landing Page](screenshots\landing.png)
+![Landing Page](screenshots/landing.png)
 * Login Page
 
-![Login Page](screenshots\login.png)
+![Login Page](screenshots/login.png)
 * Scan Page
 
-![Camera Scan Page](screenshots\scan-camera.png)
-![Upload Scan Page](screenshots\scan-upload.png)
+![Camera Scan Page](screenshots/scan-camera.png)
+![Upload Scan Page](screenshots/scan-upload.png)
 * Scan History Page
 
-![Scan History Page](screenshots\scan-history.png)
+![Scan History Page](screenshots/scan-history.png)
 * Admin Dashboard - User
 
- ![Admin Dashboard - Users](screenshots\admin-dashboard.png)
+ ![Admin Dashboard - Users](screenshots/admin-dashboard.png)
 
 ## Running the Project
 
