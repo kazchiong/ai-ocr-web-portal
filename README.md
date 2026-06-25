@@ -2,11 +2,11 @@
 
 A full-stack web application that uses OCR and OpenAI to extract and structure information from medication labels.
 
-Developed as a Major Project at Temasek Polytechnic by a team of three students.
+Developed as a Major Project as part of the Diploma in Computer Engineering at Temasek Polytechnic by a team of three students.
 
 ## Project Overview
 
-Medication labels often contain important information in an unstructured format. This project allows users to capture or upload an image of a medication label, extract text using OCR, and use AI to organise the extracted information into a more structured and readable format.
+Medication labels often contain important information in an unstructured format. This project allows users to capture or upload images of medication labels, extract text using OCR, and use AI to organise the extracted information into a structured and readable format.
 
 The system also includes user authentication, scan history management, and administrative features for managing users and institutions.
 
@@ -47,9 +47,7 @@ The system also includes user authentication, scan history management, and admin
 
 ## My Contributions
 
-This was a team project consisting of three members.
-
-My contributions included:
+As part of a three-member team project, my responsibilities included:
 
 * Developing frontend user interfaces
 * Implementing image upload and scanning workflows
@@ -64,19 +62,24 @@ Screenshots can be found in the `/screenshots` directory.
 * Landing Page
 
 ![Landing Page](screenshots/landing.png)
+
 * Login Page
 
 ![Login Page](screenshots/login.png)
+
 * Scan Page
 
 ![Camera Scan Page](screenshots/scan-camera.png)
+
 ![Upload Scan Page](screenshots/scan-upload.png)
+
 * Scan History Page
 
 ![Scan History Page](screenshots/scan-history.png)
-* Admin Dashboard - User
 
- ![Admin Dashboard - Users](screenshots/admin-dashboard.png)
+* Admin Dashboard
+
+![Admin Dashboard](screenshots/admin-dashboard.png)
 
 ## Running the Project
 
@@ -88,48 +91,62 @@ Screenshots can be found in the `/screenshots` directory.
 
 ### Installation
 
-Install dependencies:
+#### 1. Install Dependencies
 
-```bash
-npm install
-```
+Run:
+
+`npm install`
+
+#### 2. Configure Environment Variables
 
 Create a `.env` file using the provided `.env.example` template.
 
-Start the development server:
+Provide values for:
 
-```bash
-npm run dev
-```
+* Database credentials
+* Email credentials
+* JWT secret
+* OpenAI API key
+
+#### 3. Start the Application
+
+Run:
+
+`npm run dev`
 
 The application will be available at:
 
-```text
-http://localhost:3000
-```
+`http://localhost:3000`
 
 ## Environment Variables
 
-The repository does not include secrets or API keys.
+The repository does not include secrets, passwords, or API keys.
 
 Create a `.env` file and provide your own values for:
 
-```env
-DB_HOST=
-DB_USER=
-DB_PASSWORD=
-DB_NAME=
+DB_HOST
 
-EMAIL_USER=
-EMAIL_PASS=
+DB_USER
 
-JWT_SECRET=
+DB_PASSWORD
 
-OPENAI_API_KEY=
-```
+DB_NAME
+
+EMAIL_USER
+
+EMAIL_PASS
+
+JWT_SECRET
+
+OPENAI_API_KEY
 
 ## Notes
 
 * This repository is intended for portfolio and educational purposes.
 * API keys, passwords, and other sensitive credentials have been removed.
-* Some services require external accounts and configuration before the application can be run successfully.
+* Some services require external accounts and configuration before the application can run successfully.
+* OpenAI usage requires a valid API key and available credits.
+
+## Project Status
+
+Completed (Major Project – Team of Three)
