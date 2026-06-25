@@ -1,126 +1,135 @@
-# Lost and Found Mobile Application
+# AI OCR Web Portal
 
-A full-stack Android application that allows users to report, browse, and claim lost or found items. The system uses an Android frontend, a PHP backend API, and a MySQL database to manage data.
+A full-stack web application that uses OCR and OpenAI to extract and structure information from medication labels.
 
-Developed as an individual project during the Diploma in Computer Engineering at Temasek Polytechnic.
+Developed as a Major Project at Temasek Polytechnic by a team of three students.
 
 ## Project Overview
 
-The Lost and Found system digitises the process of reporting and recovering lost items. Users can create accounts, post lost or found items, browse existing listings, and submit claims for items posted by other users.
+Medication labels often contain important information in an unstructured format. This project allows users to capture or upload an image of a medication label, extract text using OCR, and use AI to organise the extracted information into a more structured and readable format.
 
-The Android application communicates with a PHP backend through API requests, while MySQL is used to store user, item, and claim information.
+The system also includes user authentication, scan history management, and administrative features for managing users and institutions.
 
 ## Key Features
 
 * User registration and login
-* Browse lost and found listings
-* Create lost or found item posts
-* Submit claims for listed items
-* View personal item listings
-* View submitted claims
-* Claim validation logic to prevent duplicate or invalid claims
-* Real-time data retrieval using API requests
+* Password reset via email
+* Image upload and camera capture
+* OCR text extraction
+* OpenAI-powered text structuring
+* Scan history tracking
+* Search and filtering of previous scans
+* Admin dashboard for user and institution management
 
 ## Technologies Used
 
-### Android Frontend
+### Frontend
 
-* Java
-* Android Studio
-* Volley
+* Next.js
+* React
+* TypeScript
+* Tailwind CSS
 
 ### Backend
 
-* PHP
-* Apache (XAMPP)
+* Node.js
+* REST APIs
+* JWT Authentication
 
 ### Database
 
 * MySQL
 
+### AI & OCR
+
+* OpenAI API
+* OCR processing library
+
 ## My Contributions
 
-This was an individual project.
+This was a team project consisting of three members.
 
-My responsibilities included:
+My contributions included:
 
-* Designing and developing the Android application
-* Implementing user authentication and account management
-* Developing item posting and claim submission workflows
-* Integrating Android frontend components with PHP backend APIs
-* Designing and managing the MySQL database
-* Implementing claim validation and business logic
-* Testing and debugging application functionality
+* Developing frontend user interfaces
+* Implementing image upload and scanning workflows
+* Integrating OpenAI API functionality
+* Connecting frontend and backend services through REST APIs
+* Testing and debugging application features
 
 ## Screenshots
 
 Screenshots can be found in the `/screenshots` directory.
 
-* Login Screen
+* Landing Page
 
-![Login Screen](screenshots/login.png)
+![Landing Page](screenshots/landing.png)
+* Login Page
 
-* Home Screen
+![Login Page](screenshots/login.png)
+* Scan Page
 
-![Home Screen](screenshots/home.png)
+![Camera Scan Page](screenshots/scan-camera.png)
+![Upload Scan Page](screenshots/scan-upload.png)
+* Scan History Page
 
-* Item Details
+![Scan History Page](screenshots/scan-history.png)
+* Admin Dashboard - User
 
-![Item Details](screenshots/item-details.png)
-
-* Create Item
-
-![Create Item](screenshots/create-item.png)
-
-* Claims Page
-
-![Claims Page](screenshots/claims.png)
+ ![Admin Dashboard - Users](screenshots/admin-dashboard.png)
 
 ## Running the Project
 
 ### Prerequisites
 
-* Android Studio
-* XAMPP
+* Node.js
 * MySQL
+* OpenAI API Key
 
 ### Installation
 
-#### 1. Set Up the Backend
+Install dependencies:
 
-Move the backend PHP files into:
+```bash
+npm install
+```
 
-`C:\xampp\htdocs\LostFoundBackend`
+Create a `.env` file using the provided `.env.example` template.
 
-Start Apache and MySQL from XAMPP.
+Start the development server:
 
-Create a MySQL database and import the project database schema.
+```bash
+npm run dev
+```
 
-Update database credentials in:
+The application will be available at:
 
-`db_connect.php`
+```text
+http://localhost:3000
+```
 
-#### 2. Configure the Android Application
+## Environment Variables
 
-Open the Android project in Android Studio.
+The repository does not include secrets or API keys.
 
-Allow Gradle dependencies to sync completely.
+Create a `.env` file and provide your own values for:
 
-Update the API base URL in the application source code so it points to your backend server.
+```env
+DB_HOST=
+DB_USER=
+DB_PASSWORD=
+DB_NAME=
 
-#### 3. Run the Application
+EMAIL_USER=
+EMAIL_PASS=
 
-Launch an Android emulator or connect a physical Android device.
+JWT_SECRET=
 
-Build and run the project from Android Studio.
+OPENAI_API_KEY=
+```
 
 ## Notes
 
-* This project was developed for educational purposes.
-* No external hosting or cloud deployment was implemented.
-* Database credentials and environment-specific settings are not included.
-* The application requires a running PHP backend and MySQL database to function correctly.
-
-## Project Status
-
-Completed (Individual Academic Project)
+* This repository is intended for portfolio and educational purposes.
+* API keys, passwords, and other sensitive credentials have been removed.
+* Some services require external accounts and configuration before the application can be run successfully.
